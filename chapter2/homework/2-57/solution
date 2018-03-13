@@ -1,0 +1,9 @@
+begin show short 12345 
+ 39 30
+begin show long 12345 
+ 39 30 90 7b 83 56 ff 7f
+begin show double 1.234500 
+ 8d 97 6e 12 83 c0 f3 3f
+
+操作系统：macOS Sierra 10.12.6
+处理器：inter core i7

@@ -1,0 +1,39 @@
+2.1.2字数据大小
+
+gcc -m32 prog.c // 将c代码编译为32位文件
+gcc -m64 prog.c // 将c代码编译为64位文件
+
+2.1.3寻址和字节顺序
+实验：
+   在本目录下分别执行以下命令：
+    gcc -m32 show-bytes.c
+    ./a.out
+
+    gcc -m64 show-bytes.c
+    ./a.out
+   分别得到以下结果：
+    ---------- gcc -m32 show-bytes.c ---------
+    begin show short 12345 
+    39 30
+    begin show int 12345 
+    39 30 00 00
+    begin show long 12345 
+    39 30 39 30                                // *diff
+    begin show float 12345.000000 
+    00 e4 40 46
+    begin show double 1.234500 
+    8d 97 6e 12 83 c0 f3 3f
+    ------------------------------------------
+
+    ---------- gcc -m64 show-bytes.c ---------
+    begin show short 12345 
+    39 30
+    begin show int 12345 
+    39 30 00 00
+    begin show long 12345 
+    39 30 a0 cb 36 5b ff 7f                   // *diff
+    begin show float 12345.000000 
+    00 e4 40 46
+    begin show double 1.234500 
+    8d 97 6e 12 83 c0 f3 3f
+    ------------------------------------------
