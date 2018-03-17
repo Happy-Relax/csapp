@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
+int main()
 {
     int32_t x = 0x89ABCDEF;
     int32_t y = 0x76543210;

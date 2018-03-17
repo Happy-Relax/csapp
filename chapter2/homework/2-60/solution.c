@@ -7,7 +7,7 @@ unsigned replace_byte (unsigned x, int i, unsigned char b) {
     return (x & filter) | replace;
 }
 
-int main(int argc, char *argv[])
+int main()
 {
     unsigned x = 0x12345678;
     printf("replace %x by %x in %d \n%x \n", x, 0xAB, 2, replace_byte(x, 2, 0xAB));

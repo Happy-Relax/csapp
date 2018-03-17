@@ -4,7 +4,7 @@
 
 typedef unsigned char *byte_pointer;
 
-int main(int argc, char *argv[])
+int main()
 {
     int32_t one = 1;
     int32_t zero = 0;
